@@ -7,7 +7,7 @@
 
 var count = 0;
 var score = 0;
-
+var answer;
 
 
 
@@ -26,9 +26,22 @@ var question4 = {   question: "Pick something.",
                     rightAnswer: "a"};
 
 
+var questionsArray = [question1,question2,question3,question4];
+
+for (score,count; questionsArray[count]; count++) {
+    alert(questionsArray[count].question);
+    answer = prompt(questionsArray[count].possibleAnswers);
+    if (answer == questionsArray[count].rightAnswer) {
+        score++;
+    }
+}
+alert("You got a " + (score/9*100) + "%");
+
+
+
 // answer alerts
-document.write("Of course you are a human. DUH!")
-document.write("Omaha - tagline goes here.")
-document.write("You're a modern, Sherlock!")
-document.write("Good choice!")
+//document.write("Of course you are a human. DUH!");
+//document.write("Omaha - tagline goes here.");
+//document.write("You're a modern, Sherlock!");
+//document.write("Good choice!");
 
